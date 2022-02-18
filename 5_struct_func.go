@@ -258,6 +258,7 @@ func main() {
 	pack1.CelsiusTest()
 	pack1.Days()
 	pack1.StackOperate()
+
 }
 
 // 结构体字段自定义操作 这里是strings.ToUpper()
