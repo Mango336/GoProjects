@@ -1,6 +1,8 @@
 package pack1
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type VCard struct {
 	name  string
@@ -164,30 +166,5 @@ func MultiInherit() { // 多重继承
 	fmt.Println("Our new CameraPhone exhibits multiple behaviors...")
 	fmt.Println("It exhibits behavior of a Camera: ", cp.TakeAPicture())
 	fmt.Println("It exhibits behavior of a Phone: ", cp.Call())
-}
-
-// magic test
-type Base struct{}
-
-func (Base) Magic() {
-	fmt.Println("base magic")
-}
-func (self *Base) MoreMagic() {
-	self.Magic()
-	self.Magic()
-}
-
-type Voodoo struct {
-	Base
-}
-
-func (Voodoo) Magic() {
-	fmt.Println("voodoo magic")
-}
-
-func MagicTest() {
-	v := new(Voodoo)
-	v.Magic()
-	v.MoreMagic()
 }
 

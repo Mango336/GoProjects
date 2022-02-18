@@ -246,15 +246,18 @@ func main() {
 	// 多重继承
 	pack1.MultiInherit()
 
-	// Test
-	pack1.MagicTest()
-
 	// 类型的String()方法和格式化描述符
 	fmt.Printf("two1 is: %v\n", two1)
 	fmt.Println("two1 is:", two1)
 	fmt.Printf("two1 is: %T\n", two1)  // %T 会给出类型的完全规格
 	fmt.Printf("two1 is: %#v\n", two1)  // %#v 会给出实例的完整输出，包括它的字段（在程序自动生成 Go 代码时也很有用）。
 
+	// Test
+	pack1.MagicTest()
+	pack1.TypeString()
+	pack1.CelsiusTest()
+	pack1.Days()
+	pack1.StackOperate()
 }
 
 // 结构体字段自定义操作 这里是strings.ToUpper()
