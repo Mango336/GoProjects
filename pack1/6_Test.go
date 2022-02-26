@@ -94,8 +94,9 @@ func CarsTest() {
 	manufactures := []string{"Ford", "Aston Martin", "Land Rover", "BMW", "Jaguar"}
 	sortedAppender, sortedCars := MakeSortedAppender(manufactures)
 	allCars.Process(sortedAppender)
-	fmt.Println(sortedCars)
-
+	fmt.Println("Map sprtedCars: ", sortedCars)
+	BMWCount := len(sortedCars["BMW"])
+	fmt.Println("We have", BMWCount, "BMWs.")
 }
 
 // 定义一个通用的Process()函数 接收一个作用与每一辆car的f函数作为参数
@@ -116,7 +117,7 @@ func (cs Cars) FindAll(f func(car *Car) bool) Cars {
 	return cars
 }
 
-// 实现Map功能 去掉除 car 对象以外的东西
+// 实现Map功能 去掉除car对象以外的东西
 func (cs Cars) Map(f func(car *Car) Any) []Any {
 	result := make([]Any, len(cs))
 	ix := 0
@@ -129,12 +130,13 @@ func (cs Cars) Map(f func(car *Car) Any) []Any {
 
 //
 func MakeSortedAppender(manufactures []string) (func(car *Car), map[string]Cars) {
+	// Prepare maps of sorted cars.
 	sortedCars := make(map[string]Cars)
 	for _, m := range manufactures {
 		sortedCars[m] = make([]*Car, 0)
 	}
 	sortedCars["Default"] = make([]*Car, 0)
-
+	// Prepare appender function:
 	appender := func(c *Car) {
 		if _, ok := sortedCars[c.Manufacturer]; ok {
 			sortedCars[c.Manufacturer] = append(sortedCars[c.Manufacturer], c)
