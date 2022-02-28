@@ -1,0 +1,5 @@
+7_ReadWriteData
+7_2_readFile
+123
+asd
+Hello Go World!
