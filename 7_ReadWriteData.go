@@ -6,28 +6,28 @@ import (
 )
 
 func main() {
-	//fmt.Println("====读取用户输入====")
+	fmt.Println("====读取用户输入====")
 	// 使用scan_读取console数据
-	//pack7.ReadInput1()
+	pack7.ReadInput1()
 	// 使用bufio包提供的buffered reader来读取数据
-	//pack7.ReadInput2()
+	pack7.ReadInput2()
 	// 使用switch
-	//pack7.SwitchInput()
+	pack7.SwitchInput()
 
-	//fmt.Println("====读取文件数据====")
-	//pack7.ReadFileData()
+	fmt.Println("====读取文件数据====")
+	pack7.ReadFileData()
 
-	//fmt.Println("====读取文件数据到一个字符串====")
-	//pack7.ReadFileToAString()
+	fmt.Println("====读取文件数据到一个字符串====")
+	pack7.ReadFileToAString()
 
-	//fmt.Println("====写入文件数据====")
-	//pack7.WriteFileData()
+	fmt.Println("====写入文件数据====")
+	pack7.WriteFileData()
 
-	//fmt.Println("====复制文件====")
-	//pack7.CopyFile("7_target.txt", "7_source.txt")
+	fmt.Println("====复制文件====")
+	pack7.CopyFile("7_target.txt", "7_source.txt")
 
 	//练习测试: 复制每行第3-5字符到新文件中
-	//pack7.Remove_3till5Chars()
+	pack7.Remove_3till5Chars()
 
 	//Json数据格式解析
 	fmt.Println("JSON 解析: ")
