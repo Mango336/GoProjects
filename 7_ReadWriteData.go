@@ -1,5 +1,10 @@
 package main
 
+import (
+	"fmt"
+	"go_test/pack7"
+)
+
 func main() {
 	//fmt.Println("====读取用户输入====")
 	// 使用scan_读取console数据
@@ -20,5 +25,20 @@ func main() {
 
 	//fmt.Println("====复制文件====")
 	//pack7.CopyFile("7_target.txt", "7_source.txt")
+
+	//练习测试: 复制每行第3-5字符到新文件中
+	//pack7.Remove_3till5Chars()
+
+	//Json数据格式解析
+	fmt.Println("JSON 解析: ")
+	pack7.JsonDataFormat()
+	//XML数据格式解析
+	fmt.Println("XML 解析: ")
+	pack7.XMLDataFormat()
+	//Gob数据格式解析
+	pack7.Gob1()  //gob encoder decoder
+	pack7.Gob2()  //将数据存为gob文件
+	pack7.Degob() //解码gob文件并打印
+	pack7.GobHash_sha1()
 
 }

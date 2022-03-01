@@ -59,7 +59,7 @@ func main() {
 }
 
 func readFromFile() {
-	file, err := os.Open("./3_buffer_test.txt")
+	file, err := os.Open("data/3_buffer_test.txt")
 	if err != nil {
 		fmt.Println("read from file error: ", err)
 	}
@@ -71,12 +71,12 @@ func readFromFile() {
 }
 
 func writeToFile() {
-	buf := bytes.NewBuffer([]byte("3_buffer_text.txt"))
-	file, err := os.Open("3_buffer_text.txt")
+	buf := bytes.NewBuffer([]byte("data/3_buffer_text.txt"))
+	file, err := os.Open("data/3_buffer_text.txt")
 	if err != nil {
 		fmt.Println("write to file error: ", err)
 	}
 	defer file.Close()
-	buf.WriteTo(file)  // buf写入到file
+	buf.WriteTo(file) // buf写入到file
 	fmt.Println("write to file success")
 }
