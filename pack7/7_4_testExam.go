@@ -8,8 +8,8 @@ import (
 )
 
 func Remove_3till5Chars() {
-	inputFile, _ := os.Open("7_input_text.txt")
-	outputFile, _ := os.OpenFile("7_output_text2.txt", os.O_WRONLY|os.O_CREATE, 0666)
+	inputFile, _ := os.Open("data/7_input_text.txt")
+	outputFile, _ := os.OpenFile("data/7_output_text2.txt", os.O_WRONLY|os.O_CREATE, 0666)
 	defer inputFile.Close()
 	defer outputFile.Close()
 	inputReader := bufio.NewReader(inputFile)

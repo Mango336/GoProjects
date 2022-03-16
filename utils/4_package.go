@@ -1,4 +1,4 @@
-package main
+package utils
 
 // import . "go_test/pack1"  // 不用通过包名来使用其中的方法 直接使用方法名即可
 // import _ "go_test/pack1"  // 只执行pack1包的init函数并初始化其中的全局变量  为了具有更好的测试效果
@@ -21,7 +21,7 @@ type Info struct {
 	str string
 }
 
-func main() {
+func Package() {
 	fmt.Println("====regexp包====")
 	regexpPackage()
 	fmt.Println("====精密计算和big包====")

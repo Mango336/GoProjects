@@ -1,5 +1,5 @@
 7_ReadWriteData
 7_2_readFile
-123
-asd
+12345678
+asdfghjk
 Hello Go World!

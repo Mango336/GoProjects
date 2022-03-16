@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"fmt"
@@ -17,7 +17,7 @@ const LIM = 41
 
 var fibs [LIM]uint64
 
-func main() { // main()最好写前面
+func LearnDoc() { // main()最好写前面
 	randExam()
 	fmt.Println("===================JoinExam==============================")
 	var s string = "hello"

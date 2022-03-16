@@ -1,7 +1,7 @@
 /*
 数组与map
 */
-package main
+package utils
 
 import (
 	"bytes"
@@ -10,7 +10,7 @@ import (
 	"sort"
 )
 
-func main() {
+func ArrayAndMap() {
 	fmt.Println("==========数组==========")
 	// 数组长度也是数组类型的一部分 [5]int 和 [10]int属于不同类型
 	var arr1 [5]int = [5]int{0}
@@ -204,7 +204,6 @@ func main() {
 	for i := range keys {
 		fmt.Printf("barVal[%s]: %d ", keys[i], barVal[keys[i]])
 	}
-
 
 }
 

@@ -1,11 +1,11 @@
-package main
+package utils
 
 import (
 	"fmt"
 	"go_test/pack7"
 )
 
-func main() {
+func ReadWriteData() {
 	fmt.Println("====读取用户输入====")
 	// 使用scan_读取console数据
 	pack7.ReadInput1()
@@ -24,7 +24,7 @@ func main() {
 	pack7.WriteFileData()
 
 	fmt.Println("====复制文件====")
-	pack7.CopyFile("7_target.txt", "7_source.txt")
+	pack7.CopyFile("data/7_target.txt", "data/7_source.txt")
 
 	//练习测试: 复制每行第3-5字符到新文件中
 	pack7.Remove_3till5Chars()

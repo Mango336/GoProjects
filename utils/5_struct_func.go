@@ -2,7 +2,7 @@
 结构体与方法
 在Go中，结构体是类的一种简化形式
 */
-package main
+package utils
 
 import (
 	"fmt"
@@ -82,7 +82,7 @@ func (np *NamePoint) Abs() float64 {
 	return np.Point.Abs() * 100.
 }
 
-func main() {
+func StructAndFunction() {
 	fmt.Println("====结构体字段赋值====")
 	var s T
 	s.a = 5 // 点号符. 在Go中叫选择器(selector)
@@ -250,7 +250,7 @@ func main() {
 	fmt.Printf("two1 is: %v\n", two1)
 	fmt.Println("two1 is:", two1)
 	fmt.Printf("two1 is: %T\n", two1)  // %T 会给出类型的完全规格
-	fmt.Printf("two1 is: %#v\n", two1)  // %#v 会给出实例的完整输出，包括它的字段（在程序自动生成 Go 代码时也很有用）。
+	fmt.Printf("two1 is: %#v\n", two1) // %#v 会给出实例的完整输出，包括它的字段（在程序自动生成 Go 代码时也很有用）。
 
 	// Test
 	pack1.MagicTest()

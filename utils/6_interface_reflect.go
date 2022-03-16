@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"fmt"
@@ -130,7 +130,7 @@ func (n NotknownType) String() string {
 
 var secret interface{} = NotknownType{"Ada", "Go", "Oberon"}
 
-func main() {
+func InterfaceAndReflect() {
 	fmt.Println("====接口====")
 	sq1 := new(Square)
 	sq1.side = 5
@@ -323,13 +323,12 @@ func main() {
 	// call the first method, which is String():
 	results := value.Method(0).Call(nil)
 	fmt.Println(results)
-	fmt.Println(value.NumMethod())  // 返回签名在结构体上方法的数量
+	fmt.Println(value.NumMethod()) // 返回签名在结构体上方法的数量
 	// 结构体的反射 例子
 	pack1.ReflectStruct()
 
 	//fmt.Println("====动态方法调用====")
 	pack1.CarsTest()
-
 
 }
 

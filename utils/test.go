@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 	"runtime"
 )
 
-func main() {
+func Testmain() {
 	var goos string = runtime.GOOS
 	fmt.Printf("The operating system is: %s\n", goos)
 	path := os.Getenv("GOPATH")

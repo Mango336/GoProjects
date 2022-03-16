@@ -31,8 +31,8 @@ func ReadFileData() {
 
 func ReadFileToAString() {
 	fmt.Println("==1. 将整个文件的内容读到一个字符串里:==")
-	inputFile := "7_input_text.txt"
-	outputFile := "7_output_text.txt"
+	inputFile := "data/7_input_text.txt"
+	outputFile := "data/7_output_text.txt"
 	buf, err := ioutil.ReadFile(inputFile) // return的是[]byte 里面存放读取到的内容和error(为nil就没错)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "File Error: %s\n", err)
@@ -122,7 +122,7 @@ func WriteFileData() {
 	//OS.O_TRUNC 截断: 指定文件已存在 就将该文件的长度截为0
 	//在读文件时文件权限是被忽视的, 所以在使用OpenFile时传入第三个参数可以用0;
 	//而在写文件时不管时Unix还是Windows 都需要使用0666
-	outputFile, outputError := os.OpenFile("7_writeFileData.txt", os.O_WRONLY|os.O_CREATE, 0666)
+	outputFile, outputError := os.OpenFile("data/7_writeFileData.txt", os.O_WRONLY|os.O_CREATE, 0666)
 	if outputError != nil {
 		fmt.Println("文件打开错误...")
 		return

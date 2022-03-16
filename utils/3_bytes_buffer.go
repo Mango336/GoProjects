@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"bytes"
@@ -20,7 +20,7 @@ import (
 //	}
 //}
 
-func main() {
+func BytesAndBuffer() {
 	/* bytes.buffer是一个缓冲byte类型的缓冲器 存放的都是byte */
 	/* 1. 创建bytes.buffer */
 	// 下面三者等价

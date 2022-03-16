@@ -1,4 +1,4 @@
-package main
+package utils
 
 import (
 	"errors"
@@ -8,7 +8,7 @@ import (
 	"math"
 )
 
-func main() {
+func ErrorsAndTest() {
 	var errNotFound error = errors.New("not found error")
 	fmt.Printf("error: %v\n", errNotFound)
 
